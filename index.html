@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>EasyInput 隐私政策</title>
+    <style>
+        :root {
+            --primary: #00B0FF;
+            --primary-dark: #0091EA;
+            --dark-bg-start: #0D1B2A;
+            --dark-bg-end: #1B4965;
+            --text-primary: #1a1a2e;
+            --text-secondary: #555;
+            --bg-section: #f8fbff;
+            --bg-card: #ffffff;
+            --radius-card: 20px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", "PingFang SC", "Microsoft YaHei", sans-serif;
+            background: linear-gradient(135deg, var(--dark-bg-start), var(--dark-bg-end));
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Hero Header */
+        .hero {
+            text-align: center;
+            padding: 60px 24px 40px;
+            background: linear-gradient(135deg, var(--dark-bg-start), var(--dark-bg-end));
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 300px;
+            height: 200px;
+            background: var(--primary);
+            opacity: 0.08;
+            border-radius: 50%;
+            filter: blur(60px);
+        }
+
+        .hero-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+
+        .hero h1 {
+            font-size: 32px;
+            font-weight: 800;
+            color: #fff;
+            letter-spacing: 1px;
+        }
+
+        .hero h1 .light {
+            font-weight: 300;
+            opacity: 0.7;
+        }
+
+        .hero h2 {
+            font-size: 18px;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.9);
+            margin-top: 20px;
+        }
+
+        .hero .update-date {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.4);
+            margin-top: 8px;
+        }
+
+        /* Content Area */
+        .content {
+            background: var(--bg-section);
+            border-radius: 24px 24px 0 0;
+            margin-top: -20px;
+            position: relative;
+            padding: 32px 20px 60px;
+            min-height: 50vh;
+        }
+
+        /* Section Card */
+        .section {
+            background: var(--bg-card);
+            border-radius: var(--radius-card);
+            padding: 24px 20px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+
+        .section h3 {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .section h3 .icon {
+            color: var(--primary);
+            font-size: 18px;
+        }
+
+        .section p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+        }
+
+        .section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .section li {
+            font-size: 15px;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            padding: 4px 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .section li .bullet {
+            color: var(--primary);
+            font-size: 14px;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        .section li strong {
+            color: var(--text-primary);
+        }
+
+        /* Sub-heading within section */
+        .sub-heading {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-top: 14px;
+            margin-bottom: 6px;
+        }
+
+        /* Important callout */
+        .callout {
+            background: #FFF8E1;
+            border-left: 3px solid #FFB300;
+            border-radius: 8px;
+            padding: 14px 16px;
+            margin-top: 14px;
+        }
+
+        .callout .callout-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #E65100;
+            margin-bottom: 4px;
+        }
+
+        .callout p {
+            font-size: 14px;
+            color: #795548;
+            margin: 0;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 30px 20px 40px;
+            background: var(--bg-section);
+        }
+
+        .footer p {
+            font-size: 13px;
+            color: #999;
+        }
+
+        .footer a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        /* Dark mode support */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text-primary: #e8e8f0;
+                --text-secondary: #a0a0b8;
+                --bg-section: #0f0f1a;
+                --bg-card: #1a1a2e;
+            }
+
+            .hero {
+                background: linear-gradient(135deg, #0D1B2A, #1B4965);
+            }
+
+            .callout {
+                background: #2a2000;
+                border-left-color: #FFB300;
+            }
+
+            .callout .callout-title {
+                color: #FFB300;
+            }
+
+            .callout p {
+                color: #d4c4a8;
+            }
+
+            .section {
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Header -->
+    <div class="hero">
+        <div class="hero-icon">🔒</div>
+        <h1>Easy<span class="light">Input</span></h1>
+        <h2>隐私政策</h2>
+        <p class="update-date">最后更新日期：2026年4月</p>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+
+        <!-- 引言 -->
+        <div class="section">
+            <h3><span class="icon">📋</span> 引言</h3>
+            <p>感谢您使用「EasyInput」应用程序（以下简称「本应用」）。我们深知个人信息对您的重要性，并会尽全力保护您的个人信息安全可靠。我们致力于维持您对我们的信任，恪守以下原则，保护您的个人信息：</p>
+            <ul>
+                <li><span class="bullet">•</span>只收集为您提供服务所必需的信息</li>
+                <li><span class="bullet">•</span>仅出于合法、正当的目的使用您的信息</li>
+                <li><span class="bullet">•</span>采取合理的安全措施保护您的信息</li>
+                <li><span class="bullet">•</span>未经您的同意，不会向第三方披露您的信息</li>
+            </ul>
+        </div>
+
+        <!-- 数据收集 -->
+        <div class="section">
+            <h3><span class="icon">📊</span> 一、我们收集的数据</h3>
+            <p>为了向您提供个性化书籍推荐服务，本应用会在您的设备上收集并存储以下数据：</p>
+
+            <div class="sub-heading">1. 综合能力测试数据</div>
+            <ul>
+                <li><span class="bullet">•</span>词汇能力、句子理解能力、篇章阅读能力（三维能力值）</li>
+                <li><span class="bullet">•</span>英语水平自评信息（考试类型、分数、预估词汇量）</li>
+            </ul>
+
+            <div class="sub-heading">2. 内容兴趣偏好数据</div>
+            <ul>
+                <li><span class="bullet">•</span>您对不同内容主题的兴趣偏好分数</li>
+            </ul>
+
+            <div class="sub-heading">3. 试读记录数据</div>
+            <ul>
+                <li><span class="bullet">•</span>试读理解率（句子级别的理解程度评分）</li>
+                <li><span class="bullet">•</span>标记的生词列表</li>
+                <li><span class="bullet">•</span>阅读进度、难度评价、喜爱度等主观反馈</li>
+            </ul>
+
+            <div class="sub-heading">4. 其他数据</div>
+            <ul>
+                <li><span class="bullet">•</span>收藏/在读书籍列表</li>
+                <li><span class="bullet">•</span>应用设置偏好（外观模式等）</li>
+            </ul>
+
+            <div class="callout">
+                <div class="callout-title">⚠️ 重要说明</div>
+                <p>以上所有数据均存储在您的本地设备上，不会与您的身份信息直接关联。我们不收集任何可以识别您个人身份的信息（如姓名、邮箱、手机号等）。</p>
+            </div>
+        </div>
+
+        <!-- 数据使用 -->
+        <div class="section">
+            <h3><span class="icon">🎯</span> 二、数据的使用目的</h3>
+            <p>我们使用收集的数据用于以下目的：</p>
+            <ul>
+                <li><span class="bullet">•</span>计算您的三维英语能力（词汇、句子、篇章阅读）</li>
+                <li><span class="bullet">•</span>基于 i+1 理论为您推荐最适合的英文书籍</li>
+                <li><span class="bullet">•</span>通过试读记录验证和优化推荐精准度</li>
+                <li><span class="bullet">•</span>保存您的阅读进度、收藏和偏好设置</li>
+                <li><span class="bullet">•</span>生成个人能力评估报告</li>
+            </ul>
+            <p>所有推荐算法均在您的设备本地运行，不依赖云端计算。</p>
+        </div>
+
+        <!-- 数据存储与安全 -->
+        <div class="section">
+            <h3><span class="icon">🛡️</span> 三、数据的存储与安全</h3>
+            <p>本应用采用纯本地存储方式：</p>
+            <ul>
+                <li><span class="bullet">•</span>数据使用 Apple SwiftData 技术存储在您的设备本地</li>
+                <li><span class="bullet">•</span>不会将您的任何数据传输到外部服务器</li>
+                <li><span class="bullet">•</span>不会通过任何网络接口上传您的测试或试读数据</li>
+                <li><span class="bullet">•</span>当您删除本应用时，所有相关数据将被同时删除</li>
+                <li><span class="bullet">•</span>应用遵循 Apple 的数据保护指南和安全标准</li>
+            </ul>
+        </div>
+
+        <!-- 数据与身份关联 -->
+        <div class="section">
+            <h3><span class="icon">👤</span> 四、数据与身份的关联</h3>
+            <p>我们特别声明：</p>
+            <ul>
+                <li><span class="bullet">•</span>本应用不要求您注册账号或提供任何个人身份信息</li>
+                <li><span class="bullet">•</span>所有收集的测试数据和试读记录均不会与您的真实身份直接关联</li>
+                <li><span class="bullet">•</span>我们不收集、存储或处理任何可识别个人身份的信息（如姓名、邮箱、设备标识符等）</li>
+                <li><span class="bullet">•</span>您的数据仅以匿名方式存在于您的本地设备上</li>
+            </ul>
+        </div>
+
+        <!-- 数据共享 -->
+        <div class="section">
+            <h3><span class="icon">🤝</span> 五、数据的共享</h3>
+            <p>我们承诺：</p>
+            <ul>
+                <li><span class="bullet">•</span>不会将您的任何数据出售给任何第三方</li>
+                <li><span class="bullet">•</span>不会将您的任何数据出租给任何第三方</li>
+                <li><span class="bullet">•</span>不会在未经您明确同意的情况下与任何第三方共享您的数据</li>
+            </ul>
+            <p>本应用不包含任何第三方广告SDK、数据分析工具或社交分享功能。</p>
+        </div>
+
+        <!-- 您的权利 -->
+        <div class="section">
+            <h3><span class="icon">✅</span> 六、您的权利</h3>
+            <p>您对您的数据享有以下权利：</p>
+            <ul>
+                <li><span class="bullet">•</span><strong>访问权：</strong>您可以随时在应用内查看您的测试结果、能力评估和收藏</li>
+                <li><span class="bullet">•</span><strong>删除权：</strong>您可以通过设置中的「清除所有数据」或删除应用来彻底删除所有信息</li>
+                <li><span class="bullet">•</span><strong>更正权：</strong>您可以随时重新进行能力测试以更新您的水平数据</li>
+                <li><span class="bullet">•</span><strong>导出权：</strong>您可以通过设置中的「导出我的数据」功能导出您的所有数据</li>
+            </ul>
+        </div>
+
+        <!-- 儿童隐私 -->
+        <div class="section">
+            <h3><span class="icon">👶</span> 七、儿童隐私保护</h3>
+            <p>本应用主要面向英语学习者，包括儿童和青少年用户。我们特别重视儿童的隐私保护：</p>
+            <ul>
+                <li><span class="bullet">•</span>我们不会故意收集13岁以下儿童的个人身份信息</li>
+                <li><span class="bullet">•</span>所有测试和试读数据均为匿名，不与任何个人身份关联</li>
+                <li><span class="bullet">•</span>本应用不包含任何社交功能，不会收集或分享任何用户间交互数据</li>
+                <li><span class="bullet">•</span>家长或监护人可以随时通过删除应用来清除所有相关数据</li>
+                <li><span class="bullet">•</span>本应用符合《儿童在线隐私保护法》（COPPA）的相关要求</li>
+            </ul>
+        </div>
+
+        <!-- 安全措施 -->
+        <div class="section">
+            <h3><span class="icon">🔐</span> 八、安全措施</h3>
+            <p>我们采取以下安全措施保护您的数据：</p>
+            <ul>
+                <li><span class="bullet">•</span>所有数据仅存储在您的本地设备上，无远程服务器存储</li>
+                <li><span class="bullet">•</span>应用遵循 Apple 的数据保护指南和 App Store 审核标准</li>
+                <li><span class="bullet">•</span>应用不包含任何第三方数据收集组件</li>
+            </ul>
+        </div>
+
+        <!-- 政策更新 -->
+        <div class="section">
+            <h3><span class="icon">📝</span> 九、隐私政策的更新</h3>
+            <p>我们可能会不时更新本隐私政策。更新后的政策将在应用内发布，并更新「最后更新日期」。如果您在政策更新后继续使用本应用，即表示您接受更新后的隐私政策。</p>
+        </div>
+
+        <!-- 免责声明 -->
+        <div class="section">
+            <h3><span class="icon">⚖️</span> 十、免责声明</h3>
+            <p>本应用中展示的书籍信息和封面图片来源于公开的互联网资源（如 Open Library API），仅供学习和参考使用。如果您认为任何内容侵犯了您的版权，请联系我们，我们将及时处理。</p>
+        </div>
+
+        <!-- 联系方式 -->
+        <div class="section">
+            <h3><span class="icon">📧</span> 十一、联系我们</h3>
+            <p>如果您对本隐私政策有任何疑问或建议，请通过以下方式联系我们：</p>
+            <ul>
+                <li><span class="bullet">•</span>通过 App Store 的应用页面提交反馈</li>
+                <li><span class="bullet">•</span>通过 GitHub 项目页面提交 Issue</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>© 2026 EasyInput. 本页面由 <a href="https://github.com/moy111/EasyInput-privacy" target="_blank">EasyInput-privacy</a> 仓库托管。</p>
+    </div>
+</body>
+</html>
