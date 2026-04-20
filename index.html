@@ -283,9 +283,19 @@
                 <li><span class="bullet">•</span>应用设置偏好（外观模式等）</li>
             </ul>
 
+            <div class="sub-heading">5. 匿名使用与诊断数据</div>
+            <p>为了持续改进应用体验，本应用通过 Apple 系统框架（如 MetricKit）收集以下匿名诊断数据：</p>
+            <ul>
+                <li><span class="bullet">•</span><strong>产品交互数据：</strong>应用功能的使用频率和交互模式，用于优化产品体验和个性化功能</li>
+                <li><span class="bullet">•</span><strong>崩溃数据：</strong>应用崩溃日志和异常信息，用于定位和修复问题</li>
+                <li><span class="bullet">•</span><strong>性能数据：</strong>CPU 使用率、内存占用、启动时间、耗电量等，用于优化应用性能</li>
+                <li><span class="bullet">•</span><strong>其他诊断数据：</strong>应用运行状态和技术诊断信息，用于保障应用稳定运行</li>
+            </ul>
+            <p>以上诊断数据通过 Apple 标准框架收集，以匿名聚合方式处理，不会与您的身份信息关联。</p>
+
             <div class="callout">
                 <div class="callout-title">⚠️ 重要说明</div>
-                <p>以上所有数据均存储在您的本地设备上，不会与您的身份信息直接关联。我们不收集任何可以识别您个人身份的信息（如姓名、邮箱、手机号等）。</p>
+                <p>上述前四类数据（能力测试、兴趣偏好、试读记录、应用设置）均存储在您的本地设备上。匿名诊断数据通过 Apple 系统框架传输，但不包含任何可以识别您个人身份的信息（如姓名、邮箱、手机号、设备标识符等）。所有数据均不会与您的真实身份直接关联。</p>
             </div>
         </div>
 
@@ -306,12 +316,12 @@
         <!-- 数据存储与安全 -->
         <div class="section">
             <h3><span class="icon">🛡️</span> 三、数据的存储与安全</h3>
-            <p>本应用采用纯本地存储方式：</p>
+            <p>本应用采用本地存储为主的方式：</p>
             <ul>
-                <li><span class="bullet">•</span>数据使用 Apple SwiftData 技术存储在您的设备本地</li>
-                <li><span class="bullet">•</span>不会将您的任何数据传输到外部服务器</li>
-                <li><span class="bullet">•</span>不会通过任何网络接口上传您的测试或试读数据</li>
-                <li><span class="bullet">•</span>当您删除本应用时，所有相关数据将被同时删除</li>
+                <li><span class="bullet">•</span>用户个人数据（能力测试、兴趣偏好、试读记录、应用设置）使用 Apple SwiftData 技术存储在您的设备本地</li>
+                <li><span class="bullet">•</span>不会将您的测试或试读等个人数据上传至任何外部服务器</li>
+                <li><span class="bullet">•</span>匿名诊断数据（崩溃、性能等）通过 Apple 系统框架（MetricKit）以聚合方式收集，不包含个人身份信息</li>
+                <li><span class="bullet">•</span>当您删除本应用时，所有本地数据将被同时删除</li>
                 <li><span class="bullet">•</span>应用遵循 Apple 的数据保护指南和安全标准</li>
             </ul>
         </div>
