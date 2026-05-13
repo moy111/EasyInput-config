@@ -236,7 +236,7 @@
         <div class="hero-icon">🔒</div>
         <h1>Easy<span class="light">Input</span></h1>
         <h2>隐私政策</h2>
-        <p class="update-date">最后更新日期：2026年4月</p>
+        <p class="update-date">最后更新日期：2026年5月</p>
     </div>
 
     <!-- Content -->
@@ -284,18 +284,20 @@
             </ul>
 
             <div class="sub-heading">5. 匿名使用与诊断数据</div>
-            <p>为了持续改进应用体验，本应用通过 Apple 系统框架（如 MetricKit）收集以下匿名诊断数据：</p>
+            <p>为了持续改进应用体验和优化推荐算法，本应用收集以下匿名数据：</p>
             <ul>
-                <li><span class="bullet">•</span><strong>产品交互数据：</strong>应用功能的使用频率和交互模式，用于优化产品体验和个性化功能</li>
-                <li><span class="bullet">•</span><strong>崩溃数据：</strong>应用崩溃日志和异常信息，用于定位和修复问题</li>
+                <li><span class="bullet">•</span><strong>产品交互数据：</strong>应用功能的使用频率和交互模式，用于优化产品体验</li>
+                <li><span class="bullet">•</span><strong>崩溃数据：</strong>应用崩溃日志和异常信息（通过 Apple MetricKit 收集），用于定位和修复问题</li>
                 <li><span class="bullet">•</span><strong>性能数据：</strong>CPU 使用率、内存占用、启动时间、耗电量等，用于优化应用性能</li>
-                <li><span class="bullet">•</span><strong>其他诊断数据：</strong>应用运行状态和技术诊断信息，用于保障应用稳定运行</li>
+                <li><span class="bullet">•</span><strong>推荐算法分析数据：</strong>书籍推荐展示记录、阅读反馈、能力变化趋势等，用于优化推荐算法的准确性</li>
+                <li><span class="bullet">•</span><strong>阅读行为数据：</strong>试读完成记录、查词行为、阅读模式偏好等匿名统计信息</li>
+                <li><span class="bullet">•</span><strong>设备信息：</strong>设备型号、操作系统版本、应用版本（不包含设备标识符）</li>
             </ul>
-            <p>以上诊断数据通过 Apple 标准框架收集，以匿名聚合方式处理，不会与您的身份信息关联。</p>
+            <p>以上数据通过 Apple CloudKit 公共数据库传输和存储，以匿名方式处理。每条数据仅包含一个随机生成的匿名安装 ID，不会与您的真实身份关联。</p>
 
             <div class="callout">
                 <div class="callout-title">⚠️ 重要说明</div>
-                <p>上述前四类数据（能力测试、兴趣偏好、试读记录、应用设置）均存储在您的本地设备上。匿名诊断数据通过 Apple 系统框架传输，但不包含任何可以识别您个人身份的信息（如姓名、邮箱、手机号、设备标识符等）。所有数据均不会与您的真实身份直接关联。</p>
+                <p>上述前四类数据（能力测试、兴趣偏好、试读记录、应用设置）均存储在您的本地设备上，不会上传至任何服务器。匿名分析与诊断数据通过 Apple CloudKit 和 MetricKit 传输，但不包含任何可以识别您个人身份的信息（如姓名、邮箱、手机号、设备标识符等）。所有数据均不会与您的真实身份直接关联。</p>
             </div>
         </div>
 
@@ -347,7 +349,7 @@
                 <li><span class="bullet">•</span>不会将您的任何数据出租给任何第三方</li>
                 <li><span class="bullet">•</span>不会在未经您明确同意的情况下与任何第三方共享您的数据</li>
             </ul>
-            <p>本应用不包含任何第三方广告SDK、数据分析工具或社交分享功能。</p>
+            <p>匿名分析数据（如推荐展示记录、阅读反馈等）通过 Apple CloudKit 公共数据库存储，仅用于改进推荐算法和应用体验，不包含任何个人身份信息。本应用不包含任何第三方广告SDK或社交分享功能。</p>
         </div>
 
         <!-- 您的权利 -->
@@ -356,9 +358,8 @@
             <p>您对您的数据享有以下权利：</p>
             <ul>
                 <li><span class="bullet">•</span><strong>访问权：</strong>您可以随时在应用内查看您的测试结果、能力评估和收藏</li>
-                <li><span class="bullet">•</span><strong>删除权：</strong>您可以通过设置中的「清除所有数据」或删除应用来彻底删除所有信息</li>
+                <li><span class="bullet">•</span><strong>删除权：</strong>您可以通过删除应用来彻底删除所有本地存储的信息</li>
                 <li><span class="bullet">•</span><strong>更正权：</strong>您可以随时重新进行能力测试以更新您的水平数据</li>
-                <li><span class="bullet">•</span><strong>导出权：</strong>您可以通过设置中的「导出我的数据」功能导出您的所有数据</li>
             </ul>
         </div>
 
@@ -380,7 +381,8 @@
             <h3><span class="icon">🔐</span> 八、安全措施</h3>
             <p>我们采取以下安全措施保护您的数据：</p>
             <ul>
-                <li><span class="bullet">•</span>所有数据仅存储在您的本地设备上，无远程服务器存储</li>
+                <li><span class="bullet">•</span>用户个人数据仅存储在您的本地设备上</li>
+                <li><span class="bullet">•</span>匿名分析数据通过 Apple CloudKit 加密传输和存储，遵循 Apple 的数据保护标准</li>
                 <li><span class="bullet">•</span>应用遵循 Apple 的数据保护指南和 App Store 审核标准</li>
                 <li><span class="bullet">•</span>应用不包含任何第三方数据收集组件</li>
             </ul>
