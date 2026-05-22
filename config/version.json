@@ -1,0 +1,22 @@
+{
+  "api_version": 1,
+  "environments": {
+    "production": {
+      "latest_version": "1.0.4",
+      "minimum_supported_version": "1.0.0",
+      "update_url": "https://apps.apple.com/app/idxxxx",
+      "release_notes": [
+        "新增阅读进度编辑功能",
+        "优化输入响应速度"
+      ]
+    },
+    "testflight": {
+      "latest_version": "1.0.5",
+      "minimum_supported_version": "1.0.0",
+      "update_url": "https://testflight.apple.com/join/xxxx",
+      "release_notes": [
+        "Beta 测试版本"
+      ]
+    }
+  }
+}
