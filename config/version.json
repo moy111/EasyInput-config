@@ -2,7 +2,7 @@
   "api_version": 1,
   "environments": {
     "production": {
-      "latest_version": "1.0.4",
+      "latest_version": "1.0.3",
       "minimum_supported_version": "1.0.0",
       "latest_build": 1,
       "update_url": "https://testflight.apple.com/join/jWH9jb3F",
@@ -12,12 +12,12 @@
       ]
     },
     "testflight": {
-      "latest_version": "1.0.4",
+      "latest_version": "1.0.3",
       "minimum_supported_version": "1.0.0",
       "latest_build": 1,
       "update_url": "https://testflight.apple.com/join/jWH9jb3F",
       "release_notes": [
-        "测试一下beta哈哈哈哈"
+        "测试一下beta哈哈哈哈，我又不更新了"
       ]
     }
   }
