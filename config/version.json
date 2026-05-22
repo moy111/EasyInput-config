@@ -4,6 +4,7 @@
     "production": {
       "latest_version": "1.0.3",
       "minimum_supported_version": "1.0.0",
+      "latest_build": 1,
       "update_url": "https://testflight.apple.com/join/jWH9jb3F",
       "release_notes": [
         "新增阅读进度编辑功能",
@@ -13,6 +14,7 @@
     "testflight": {
       "latest_version": "1.0.3",
       "minimum_supported_version": "1.0.0",
+      "latest_build": 1,
       "update_url": "https://testflight.apple.com/join/jWH9jb3F",
       "release_notes": [
         "Beta 测试版本"
