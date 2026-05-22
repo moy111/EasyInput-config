@@ -2,22 +2,22 @@
   "api_version": 1,
   "environments": {
     "production": {
-      "latest_version": "1.0.3",
+      "latest_version": "1.0.4",
       "minimum_supported_version": "1.0.0",
       "latest_build": 1,
       "update_url": "https://testflight.apple.com/join/jWH9jb3F",
       "release_notes": [
-        "新增阅读进度编辑功能",
-        "优化输入响应速度"
+        "测试一下",
+        "测试一下测试一下"
       ]
     },
     "testflight": {
-      "latest_version": "1.0.3",
+      "latest_version": "1.0.4",
       "minimum_supported_version": "1.0.0",
       "latest_build": 1,
       "update_url": "https://testflight.apple.com/join/jWH9jb3F",
       "release_notes": [
-        "Beta 测试版本"
+        "测试一下beta"
       ]
     }
   }
