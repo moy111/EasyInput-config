@@ -4,21 +4,33 @@
     "production": {
       "latest_version": "1.0.3",
       "minimum_supported_version": "1.0.0",
-      "latest_build": 1,
+      "latest_build": 3,
       "update_url": "https://testflight.apple.com/join/jWH9jb3F",
       "release_notes": [
-        "测试一下",
-        "测试一下测试一下"
+        "智能查词引擎：词形还原、词组识别、专有名词预路由",
+        "词汇追踪系统：图鉴、时间线、亲密度分层",
+        "语义锚点：AI 生成语境词义 + 多义词切换",
+        "阅读器改进：锚点恢复、段落感知分词",
+        "书库扩充至 142 本英文原版书",
+        "陪伴式学习通知 + 版本更新检测",
+        "iOS 26 Liquid Glass 适配 + 暗色模式",
+        "数据库迁移稳定性修复"
       ]
     },
     "testflight": {
       "latest_version": "1.0.3",
       "minimum_supported_version": "1.0.0",
-      "latest_build": 1,
+      "latest_build": 3,
       "update_url": "https://testflight.apple.com/join/jWH9jb3F",
       "release_notes": [
-        "测试一下beta哈哈哈哈，我又不更新了，",
-        "再试一下"
+        "智能查词引擎：词形还原、词组识别、专有名词预路由",
+        "词汇追踪系统：图鉴、时间线、亲密度分层",
+        "语义锚点：AI 生成语境词义 + 多义词切换",
+        "阅读器改进：锚点恢复、段落感知分词",
+        "书库扩充至 142 本英文原版书",
+        "陪伴式学习通知 + 版本更新检测",
+        "iOS 26 Liquid Glass 适配 + 暗色模式",
+        "数据库迁移稳定性修复"
       ]
     }
   }
