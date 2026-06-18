@@ -236,7 +236,7 @@
         <div class="hero-icon">🔒</div>
         <h1>Easy<span class="light">Input</span></h1>
         <h2>隐私政策</h2>
-        <p class="update-date">最后更新日期：2026年5月</p>
+        <p class="update-date">最后更新日期：2026年6月</p>
     </div>
 
     <!-- Content -->
@@ -250,7 +250,7 @@
                 <li><span class="bullet">•</span>只收集为您提供服务所必需的信息</li>
                 <li><span class="bullet">•</span>仅出于合法、正当的目的使用您的信息</li>
                 <li><span class="bullet">•</span>采取合理的安全措施保护您的信息</li>
-                <li><span class="bullet">•</span>未经您的同意，不会向第三方披露您的信息</li>
+                <li><span class="bullet">•</span>除本政策明确说明的 AI 语境释义服务外，未经您的同意，不会向第三方披露您的信息</li>
             </ul>
         </div>
 
@@ -313,6 +313,7 @@
                 <li><span class="bullet">•</span>生成个人能力评估报告</li>
             </ul>
             <p>所有推荐算法均在您的设备本地运行，不依赖云端计算。</p>
+            <p>AI 语境释义功能会将您查询的词汇及所在阅读语境发送给智谱 AI（BigModel），用于生成基于语境的词汇释义。详见下方「AI 数据处理」章节。</p>
         </div>
 
         <!-- 数据存储与安全 -->
@@ -347,7 +348,7 @@
             <ul>
                 <li><span class="bullet">•</span>不会将您的任何数据出售给任何第三方</li>
                 <li><span class="bullet">•</span>不会将您的任何数据出租给任何第三方</li>
-                <li><span class="bullet">•</span>不会在未经您明确同意的情况下与任何第三方共享您的数据</li>
+                <li><span class="bullet">•</span>除 AI 语境释义服务（智谱 AI）外，不会在未经您明确同意的情况下与任何第三方共享您的数据</li>
             </ul>
             <p>匿名分析数据（如推荐展示记录、阅读反馈等）通过 Apple CloudKit 公共数据库存储，仅用于改进推荐算法和应用体验，不包含任何个人身份信息。本应用不包含任何第三方广告SDK或社交分享功能。</p>
         </div>
@@ -384,8 +385,47 @@
                 <li><span class="bullet">•</span>用户个人数据仅存储在您的本地设备上</li>
                 <li><span class="bullet">•</span>匿名分析数据通过 Apple CloudKit 加密传输和存储，遵循 Apple 的数据保护标准</li>
                 <li><span class="bullet">•</span>应用遵循 Apple 的数据保护指南和 App Store 审核标准</li>
-                <li><span class="bullet">•</span>应用不包含任何第三方数据收集组件</li>
+                <li><span class="bullet">•</span>应用不包含任何第三方广告 SDK 或数据收集组件</li>
+                <li><span class="bullet">•</span>AI 语境释义功能使用智谱 AI（BigModel）服务，详见下方「AI 数据处理」章节</li>
             </ul>
+        </div>
+
+        <!-- 政策更新 -->
+        <div class="section">
+            <h3><span class="icon">🤖</span> AI 数据处理</h3>
+            <p>本应用使用 AI 服务为您提供智能词汇语境释义功能。以下是 AI 数据处理的详细说明：</p>
+
+            <div class="sub-heading">服务提供商</div>
+            <ul>
+                <li><span class="bullet">•</span><strong>智谱 AI（BigModel）</strong>，服务地址：open.bigmodel.cn</li>
+            </ul>
+
+            <div class="sub-heading">发送的数据</div>
+            <p>当您在阅读中查词时，以下数据会发送给智谱 AI：</p>
+            <ul>
+                <li><span class="bullet">•</span><strong>查询的词汇：</strong>您点击查询的英文单词或短语</li>
+                <li><span class="bullet">•</span><strong>阅读语境：</strong>该词所在的句子（用于生成基于语境的释义，而非通用词典释义）</li>
+                <li><span class="bullet">•</span><strong>书籍标题：</strong>当前阅读的书名（用于辅助语境理解）</li>
+            </ul>
+
+            <div class="sub-heading">数据用途</div>
+            <p>发送的数据仅用于生成基于阅读语境的词汇释义。例如，查询"vessel"时，AI 会根据上下文判断此处指"船只"而非"血管"。</p>
+
+            <div class="sub-heading">数据保护</div>
+            <ul>
+                <li><span class="bullet">•</span>智谱 AI 不会将您的数据用于模型训练</li>
+                <li><span class="bullet">•</span>数据通过 HTTPS 加密传输</li>
+                <li><span class="bullet">•</span>不发送任何个人身份信息（姓名、邮箱、设备标识符等）</li>
+                <li><span class="bullet">•</span>不发送您的能力测试数据、兴趣偏好或阅读进度</li>
+            </ul>
+
+            <div class="sub-heading">离线降级</div>
+            <p>AI 语境释义为异步补充功能。查词时，系统词典结果会立即显示；AI 语境释义在网络不可用或服务超时时会自动跳过，不影响基础查词功能。</p>
+
+            <div class="callout">
+                <div class="callout-title">💡 关于 AI 释义</div>
+                <p>AI 语境释义是对系统词典的补充增强，不是替代。您始终可以查看完整的系统词典释义。AI 释义结果会标注来源，便于区分。</p>
+            </div>
         </div>
 
         <!-- 政策更新 -->
@@ -414,7 +454,7 @@
 
     <!-- Footer -->
     <div class="footer">
-        <p>© 2026 EasyInput. 本页面由 <a href="https://github.com/moy111/EasyInput-privacy" target="_blank">EasyInput-privacy</a> 仓库托管。</p>
+        <p>© 2026 EasyInput. 本页面由 <a href="https://github.com/moy111/EasyInput-config" target="_blank">EasyInput-config</a> 仓库托管。</p>
     </div>
 </body>
 </html>
