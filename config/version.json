@@ -4,23 +4,21 @@
     "production": {
       "latest_version": "1.0.3",
       "minimum_supported_version": "1.0.0",
-      "latest_build": 3,
+      "latest_build": 5,
       "update_url": "https://testflight.apple.com/join/jWH9jb3F",
       "release_notes": [
-        "修复了已知bug，增加了稳定性",
-        "新增CloudKit云同步，现在可以在多台设备同步数据了！（需要同一个iCloud账号）",
-        "适配了iPadOS，赶紧用更大的屏幕来沉浸式阅读吧！",
+        "修复了已知bug，增加了稳定性，更加流畅了",
+        "适配了iPhone横屏全文阅读",
       ]
     },
     "testflight": {
       "latest_version": "1.0.3",
       "minimum_supported_version": "1.0.0",
-      "latest_build": 3,
+      "latest_build": 5,
       "update_url": "https://testflight.apple.com/join/jWH9jb3F",
       "release_notes": [
-        "修复了已知bug，增加了稳定性",
-        "新增CloudKit云同步，现在可以在多台设备同步数据了！（需要同一个iCloud账号）",
-        "适配了iPadOS，赶紧用更大的屏幕来沉浸式阅读吧！",
+        "修复了已知bug，增加了稳定性，更加流畅了",
+        "适配了iPhone横屏全文阅读",
       ]
     }
   }
