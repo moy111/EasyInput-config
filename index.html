@@ -236,7 +236,7 @@
         <div class="hero-icon">🔒</div>
         <h1>Easy<span class="light">Input</span></h1>
         <h2>隐私政策</h2>
-        <p class="update-date">最后更新日期：2026年8月8日（App Store 提交版）</p>
+        <p class="update-date">最后更新日期：2026年11月1日</p>
     </div>
 
     <!-- Content -->
@@ -282,12 +282,13 @@
                 <li><span class="bullet">•</span>收藏/在读书籍列表</li>
                 <li><span class="bullet">•</span>应用设置偏好（外观模式等）</li>
                 <li><span class="bullet">•</span>用户导入书籍的书目资料、清洗后正文、节选、封面和完整性摘要</li>
+                <li><span class="bullet">•</span><strong>阅读 AI 与书籍导入额度记录：</strong>事件 UUID、当前 EasyInput 档案的应用内 UUID、成功完成时间，以及功能类型和本地日期或月份标记，用于按档案同步使用次数。导入事件还包含应用内书籍标识的哈希，用于同日去重；不包含查询词、书名、原始文件名、阅读正文或 AI 答案</li>
             </ul>
 
             <p>您选择的原始 TXT、EPUB 或 PDF 文件及设备文件路径只保存在当前设备，不上传 iCloud。为了让同一 iCloud 账户的其他设备可以阅读，应用会同步经过处理的可读正文与必要书目资料。</p>
 
             <div class="sub-heading">5. 可选的产品分析与系统诊断数据</div>
-            <p>产品分析默认关闭。只有在您主动开启「帮助改进 EasyInput」后，本应用才会收集以下假名化产品分析数据；您可以随时在设置中关闭：</p>
+            <p>首次显示隐私说明时，「帮助改进 EasyInput」会预选开启。只有在您点击「同意并继续」且该开关保持开启后，本应用才会开始收集以下假名化产品分析数据；点击同意前不会生成产品分析安装标识或上传分析数据。您可以在继续前关闭，也可以随时在设置中关闭：</p>
             <ul>
                 <li><span class="bullet">•</span><strong>产品交互数据：</strong>应用功能的使用频率和交互模式，用于优化产品体验</li>
                 <li><span class="bullet">•</span><strong>推荐算法分析数据：</strong>书籍推荐展示记录、阅读反馈、能力变化趋势等，用于优化推荐算法的准确性</li>
@@ -320,6 +321,7 @@
             </ul>
             <p>所有推荐算法均在您的设备本地运行，不依赖云端计算。</p>
             <p>AI 语境释义功能会将您查询的词汇及所在阅读语境加密发送至 EasyInput 位于上海的服务端，再转发给北京智谱华章科技股份有限公司提供的智谱清言（ChatGLM），用于生成基于语境的词汇释义。详见下方「AI 数据处理」章节。</p>
+            <p>“我的阅读成长”和分享使用设备及您的 iCloud 私有数据。购买、扣款和退款由 Apple 处理。Pro 用户请求语境查词或深入解释时，App 会按需向 EasyInput 服务端验证订阅并取得短期访问令牌；令牌有效期间可复用。详见下方「订阅与阅读 AI 验证」。</p>
         </div>
 
         <!-- 数据存储与安全 -->
@@ -331,6 +333,7 @@
                 <li><span class="bullet">•</span>同一 Apple 账户的设备通过 CloudKit 私有数据库同步上述数据</li>
                 <li><span class="bullet">•</span>原始导入文件和设备路径保持本机专属；移除原文件不会删除已同步的可读正文、阅读记录或进度</li>
                 <li><span class="bullet">•</span>当前版本不把完整 MetricKit 性能或诊断报告上传到 EasyInput 服务器或产品分析数据库，也不由 EasyInput 自行持久化</li>
+                <li><span class="bullet">•</span>阅读 AI 与书籍导入额度记录可进入用户 CloudKit 私有数据库；订阅状态和 Apple 签名交易不会写入 CloudKit</li>
                 <li><span class="bullet">•</span>删除 App 会移除当前设备上的 App 数据，但不会自动删除已存入 iCloud 的副本；重新安装并使用同一 Apple 账户时，数据可能再次同步回来</li>
                 <li><span class="bullet">•</span>应用遵循 Apple 的数据保护指南和安全标准</li>
             </ul>
@@ -345,6 +348,7 @@
                 <li><span class="bullet">•</span>CloudKit 私有数据库由 Apple 按当前 iCloud 账户隔离；本应用不会取得您的 Apple 账户姓名、邮箱或密码</li>
                 <li><span class="bullet">•</span>可选产品分析数据不会包含您的昵称、姓名、邮箱、手机号或设备广告标识符；事件仅通过随机安装标识进行假名化关联</li>
                 <li><span class="bullet">•</span>AI 请求不会附带档案、阅读进度、书名或设备标识</li>
+                <li><span class="bullet">•</span>Pro 阅读 AI 的订阅验证与阅读文本请求相互分离：交易验证不包含阅读内容，AI 内容请求不包含 Apple 签名交易</li>
             </ul>
         </div>
 
@@ -358,6 +362,9 @@
                 <li><span class="bullet">•</span>除 AI 语境释义服务（智谱 AI）外，不会在未经您明确同意的情况下与任何第三方共享您的数据</li>
             </ul>
             <p>Apple CloudKit 用于保存和同步数据；只有在您明确同意后，本应用才会把下方列出的最少文本发送至 EasyInput 服务端并转发给智谱。可选产品分析数据仅用于改进算法和应用体验。本应用不包含第三方广告 SDK，也不进行跨 App 跟踪。您主动开启的产品分析数据通过 Apple CloudKit 传输；完整 MetricKit 报告不会由本应用上传或自行保存。</p>
+
+            <div class="sub-heading">公版书全文下载</div>
+            <p>对已核验且页面标明“公版书 · 可获取全文”的作品，本应用会在您选择阅读全文时，通过 HTTPS 从 Cloudflare R2 下载对应的纯文本版本并保存在当前设备。下载请求包含公开对象路径及建立网络连接所必需的信息；不会附带您的 EasyInput 档案、能力数据、阅读进度、查词内容或用户导入正文。Cloudflare 作为基础设施提供商会依据其公开政策处理连接数据。</p>
         </div>
 
         <!-- 您的权利 -->
@@ -416,7 +423,7 @@
                 <li><span class="bullet">•</span><strong>查询的词汇：</strong>您点击查询的英文单词或短语</li>
                 <li><span class="bullet">•</span><strong>目标句：</strong>包含该词的完整句子</li>
                 <li><span class="bullet">•</span><strong>邻近文本：</strong>当前段落及相邻段落中最多 600 个字符，用于理解语境</li>
-                <li><span class="bullet">•</span><strong>本地派生提示：</strong>设备本地识别的词性和目标类型</li>
+                <li><span class="bullet">•</span><strong>本地派生提示：</strong>您查询的是单个词还是连续选中的文本；不再预先识别词性或检索词典义项</li>
             </ul>
 
             <div class="sub-heading">数据用途</div>
@@ -434,8 +441,13 @@
             <div class="sub-heading">服务商处理与保留</div>
             <p>EasyInput 服务端仅在完成本次转发和短期限流所需的内存中处理数据，不建立 AI 对话档案。智谱会按照其公开条款，在提供服务和满足合规要求所需的最小必要范围内存储数据，并采取必要的匿名化和加密处理。其公开隐私政策说明，无法重新识别的匿名化数据可能用于研究、统计、改进产品和服务，包括机器学习或模型算法训练。因此，EasyInput 不向您承诺智谱“零留存”或“绝不训练”。您可查看<a href="https://docs.bigmodel.cn/cn/terms/privacy-policy">智谱隐私政策</a>、<a href="https://docs.bigmodel.cn/cn/terms/service-agreement">服务协议</a>及<a href="https://docs.bigmodel.cn/cn/terms/user-agreement">用户协议</a>。</p>
 
+            <div class="sub-heading">订阅与阅读 AI 验证</div>
+            <p>EasyInput Pro 通过 Apple 的 App 内购买提供。支付资料、扣款、续订、退款和撤销由 Apple 处理，EasyInput 不接触您的银行卡、支付宝资料或 Apple 账户密码。本地 Pro 权益由设备端已经验证的 StoreKit 交易判断，订阅状态不会写入您的 CloudKit 阅读数据。</p>
+            <p>当 Pro 用户主动请求语境查词或深入解释且需要取得或更新访问令牌时，App 会把 Apple 签名交易 JWS 加密发送到 EasyInput 上海服务器。服务器使用 Apple 官方服务端库实时验证签名并向 Apple 查询当前订阅是否处于有效期或账单宽限期。原始交易 JWS 只在完成本次验证所需的内存中处理，验证完成即丢弃，不写入日志或数据库。验证成功后返回最长 15 分钟的短期访问令牌；该令牌不包含用户、设备或交易标识。</p>
+            <p>订阅验证请求不包含查询词、书名、阅读正文或 AI 答案；后续阅读 AI 内容请求也不再携带 Apple 签名交易。订阅到期、退款或撤销不会删除您的书籍、阅读进度、基础成长数据、分享内容或过去已生成的 Deep 结果。</p>
+
             <div class="sub-heading">您的选择</div>
-            <p>在第一次 AI 查词请求发送前，本应用会明确展示接收方和上述数据范围，并提供「同意并发送」与「不同意，仅使用系统词典」。您可在设置中随时撤回同意。</p>
+            <p>在第一次 AI 查词请求发送前，本应用会明确展示接收方和上述数据范围，并提供「允许并查词」与「使用系统词典」。您可在设置中随时撤回同意。</p>
 
             <div class="sub-heading">离线降级</div>
             <p>AI 语境释义是系统词典的补充。请求较多或出现可恢复网络错误时，应用会在有限时间内自动排队重试；网络不可用、您不同意或服务失败时，系统词典仍可使用。</p>
@@ -455,7 +467,8 @@
         <!-- 免责声明 -->
         <div class="section">
             <h3><span class="icon">⚖️</span> 十、免责声明</h3>
-            <p>本应用中展示的书籍信息和封面图片来源于公开的互联网资源（如 Open Library API），仅供学习和参考使用。如果您认为任何内容侵犯了您的版权，请联系我们，我们将及时处理。</p>
+            <p>本应用中的公版原文、可下载全文和历史封面仅在作品、来源版本及相关权利证据通过发布审核后使用；没有独立封面证据的书籍使用应用内生成的抽象语义封面。受保护或权利证据不足的作品不提供原作全文，仅提供明确标记为“AI 生成参考”的原创阅读材料，或读取用户自行导入的内容。</p>
+            <p>如果您认为书籍资料、正文或封面侵犯了您的合法权益，请通过下方联系方式提供作品、权利归属和具体页面信息。我们会及时核验并在必要时下架相关内容。</p>
         </div>
 
         <!-- 联系方式 -->
@@ -472,7 +485,7 @@
 
     <!-- Footer -->
     <div class="footer">
-        <p>© 2026 EasyInput. 本页面由 <a href="https://github.com/moy111/EasyInput-config" target="_blank">EasyInput-config</a> 仓库托管。</p>
+        <p>© 2026 EasyInput · 自在学外语</p>
     </div>
 </body>
 </html>
