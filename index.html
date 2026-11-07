@@ -236,7 +236,7 @@
         <div class="hero-icon">🔒</div>
         <h1>Easy<span class="light">Input</span></h1>
         <h2>隐私政策</h2>
-        <p class="update-date">最后更新日期：2026年11月1日</p>
+        <p class="update-date">最后更新日期：2026年11月7日</p>
     </div>
 
     <!-- Content -->
@@ -285,7 +285,7 @@
                 <li><span class="bullet">•</span><strong>阅读 AI 与书籍导入额度记录：</strong>事件 UUID、当前 EasyInput 档案的应用内 UUID、成功完成时间，以及功能类型和本地日期或月份标记，用于按档案同步使用次数。导入事件还包含应用内书籍标识的哈希，用于同日去重；不包含查询词、书名、原始文件名、阅读正文或 AI 答案</li>
             </ul>
 
-            <p>您选择的原始 TXT、EPUB 或 PDF 文件及设备文件路径只保存在当前设备，不上传 iCloud。为了让同一 iCloud 账户的其他设备可以阅读，应用会同步经过处理的可读正文与必要书目资料。</p>
+            <p>您选择的原始 TXT、EPUB 或 PDF 文件会保存在本机，并随自动保护副本保存到本机文件夹；iCloud 可用时，副本也会保存到您当前 Apple 账户的 iCloud 云盘，用于自动恢复。副本还包含档案、压缩后的头像、阅读记录、查词释义及可读书籍等恢复所需资料。设备文件路径不通过 CloudKit 同步；恢复时会在当前设备重新建立文件引用。为了让同一 iCloud 账户的其他设备可以阅读，应用还会通过 CloudKit 私有数据库同步经过处理的可读正文与必要书目资料。</p>
 
             <div class="sub-heading">5. 可选的产品分析与系统诊断数据</div>
             <p>首次显示隐私说明时，「帮助改进 EasyInput」会预选开启。只有在您点击「同意并继续」且该开关保持开启后，本应用才会开始收集以下假名化产品分析数据；点击同意前不会生成产品分析安装标识或上传分析数据。您可以在继续前关闭，也可以随时在设置中关闭：</p>
@@ -327,11 +327,11 @@
         <!-- 数据存储与安全 -->
         <div class="section">
             <h3><span class="icon">🛡️</span> 三、数据的存储与安全</h3>
-            <p>本应用采用本地 SwiftData 与 Apple CloudKit 私有数据库同步：</p>
+            <p>本应用采用本地 SwiftData、Apple CloudKit 私有数据库同步，以及本机和 iCloud 云盘中的自动保护副本：</p>
             <ul>
                 <li><span class="bullet">•</span>档案、能力、试读、阅读记录、进度、在读状态和用户可读书籍先存储在本机</li>
                 <li><span class="bullet">•</span>同一 Apple 账户的设备通过 CloudKit 私有数据库同步上述数据</li>
-                <li><span class="bullet">•</span>原始导入文件和设备路径保持本机专属；移除原文件不会删除已同步的可读正文、阅读记录或进度</li>
+                <li><span class="bullet">•</span>原始导入文件会包含在本机及 iCloud 云盘的自动保护副本中；移除本机原文件不会删除已有云端副本、已同步的可读正文、阅读记录或进度</li>
                 <li><span class="bullet">•</span>当前版本不把完整 MetricKit 性能或诊断报告上传到 EasyInput 服务器或产品分析数据库，也不由 EasyInput 自行持久化</li>
                 <li><span class="bullet">•</span>阅读 AI 与书籍导入额度记录可进入用户 CloudKit 私有数据库；订阅状态和 Apple 签名交易不会写入 CloudKit</li>
                 <li><span class="bullet">•</span>删除 App 会移除当前设备上的 App 数据，但不会自动删除已存入 iCloud 的副本；重新安装并使用同一 Apple 账户时，数据可能再次同步回来</li>
