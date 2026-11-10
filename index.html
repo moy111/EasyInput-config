@@ -236,7 +236,7 @@
         <div class="hero-icon">🔒</div>
         <h1>Easy<span class="light">Input</span></h1>
         <h2>隐私政策</h2>
-        <p class="update-date">最后更新日期：2026年11月7日</p>
+        <p class="update-date">最后更新日期：2026年11月10日</p>
     </div>
 
     <!-- Content -->
@@ -331,7 +331,8 @@
             <ul>
                 <li><span class="bullet">•</span>档案、能力、试读、阅读记录、进度、在读状态和用户可读书籍先存储在本机</li>
                 <li><span class="bullet">•</span>同一 Apple 账户的设备通过 CloudKit 私有数据库同步上述数据</li>
-                <li><span class="bullet">•</span>原始导入文件会包含在本机及 iCloud 云盘的自动保护副本中；移除本机原文件不会删除已有云端副本、已同步的可读正文、阅读记录或进度</li>
+                <li><span class="bullet">•</span>原始导入文件会包含在本机及 iCloud 云盘的自动保护副本中；移除本机原文件不会立即清除已有云端副本，这些副本仍按下述规则滚动保留；已同步的可读正文、阅读记录和进度不受该文件移除影响</li>
+                <li><span class="bullet">•</span>自动保护副本正常整理后保留最近 40 天内最新的最多 5 份，同一 Apple 账户的不同设备共享云端 5 份名额；超过期限或数量的旧恢复点会自动淘汰。上传尚未确认或文件无法安全校验时会暂留旧份；久未使用时会先保存新的完整副本，再清理最后的旧恢复点。此规则只清理自动备份文件，不删除当前书库、阅读记录或进度</li>
                 <li><span class="bullet">•</span>当前版本不把完整 MetricKit 性能或诊断报告上传到 EasyInput 服务器或产品分析数据库，也不由 EasyInput 自行持久化</li>
                 <li><span class="bullet">•</span>阅读 AI 与书籍导入额度记录可进入用户 CloudKit 私有数据库；订阅状态和 Apple 签名交易不会写入 CloudKit</li>
                 <li><span class="bullet">•</span>删除 App 会移除当前设备上的 App 数据，但不会自动删除已存入 iCloud 的副本；重新安装并使用同一 Apple 账户时，数据可能再次同步回来</li>
