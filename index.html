@@ -236,7 +236,7 @@
         <div class="hero-icon">🔒</div>
         <h1>Easy<span class="light">Input</span></h1>
         <h2>隐私政策</h2>
-        <p class="update-date">最后更新日期：2026年11月10日</p>
+        <p class="update-date">最后更新日期：2026年11月16日</p>
     </div>
 
     <!-- Content -->
@@ -320,7 +320,7 @@
                 <li><span class="bullet">•</span>生成个人能力评估报告</li>
             </ul>
             <p>所有推荐算法均在您的设备本地运行，不依赖云端计算。</p>
-            <p>AI 语境释义功能会将您查询的词汇及所在阅读语境加密发送至 EasyInput 位于上海的服务端，再转发给北京智谱华章科技股份有限公司提供的智谱清言（ChatGLM），用于生成基于语境的词汇释义。详见下方「AI 数据处理」章节。</p>
+            <p>AI 语境释义功能会将您查询的词汇及所在阅读语境加密发送至 EasyInput 位于上海的服务端，再转发给已获同意的查词服务商，用于生成基于语境的词汇释义。详见下方「AI 数据处理」章节。</p>
             <p>“我的阅读成长”和分享使用设备及您的 iCloud 私有数据。购买、扣款和退款由 Apple 处理。Pro 用户请求语境查词或深入解释时，App 会按需向 EasyInput 服务端验证订阅并取得短期访问令牌；令牌有效期间可复用。详见下方「订阅与阅读 AI 验证」。</p>
         </div>
 
@@ -360,9 +360,9 @@
             <ul>
                 <li><span class="bullet">•</span>不会将您的任何数据出售给任何第三方</li>
                 <li><span class="bullet">•</span>不会将您的任何数据出租给任何第三方</li>
-                <li><span class="bullet">•</span>除 AI 语境释义服务（智谱 AI）外，不会在未经您明确同意的情况下与任何第三方共享您的数据</li>
+                <li><span class="bullet">•</span>与第三方共享 AI 语境释义所需的数据前，App 会征求您的明确同意</li>
             </ul>
-            <p>Apple CloudKit 用于保存和同步数据；只有在您明确同意后，本应用才会把下方列出的最少文本发送至 EasyInput 服务端并转发给智谱。可选产品分析数据仅用于改进算法和应用体验。本应用不包含第三方广告 SDK，也不进行跨 App 跟踪。您主动开启的产品分析数据通过 Apple CloudKit 传输；完整 MetricKit 报告不会由本应用上传或自行保存。</p>
+            <p>Apple CloudKit 用于保存和同步数据；只有在您明确同意后，本应用才会把下方列出的最少文本发送至 EasyInput 服务端并转发给已获同意的查词服务商。可选产品分析数据仅用于改进算法和应用体验。本应用不包含第三方广告 SDK，也不进行跨 App 跟踪。您主动开启的产品分析数据通过 Apple CloudKit 传输；完整 MetricKit 报告不会由本应用上传或自行保存。</p>
 
             <div class="sub-heading">公版书全文下载</div>
             <p>对已核验且页面标明“公版书 · 可获取全文”的作品，本应用会在您选择阅读全文时，通过 HTTPS 从 Cloudflare R2 下载对应的纯文本版本并保存在当前设备。下载请求包含公开对象路径及建立网络连接所必需的信息；不会附带您的 EasyInput 档案、能力数据、阅读进度、查词内容或用户导入正文。Cloudflare 作为基础设施提供商会依据其公开政策处理连接数据。</p>
@@ -401,8 +401,8 @@
                 <li><span class="bullet">•</span>用户阅读数据通过 Apple CloudKit 私有数据库在同一 iCloud 账户设备间同步</li>
                 <li><span class="bullet">•</span>CloudKit 与 AI 请求均使用加密连接传输</li>
                 <li><span class="bullet">•</span>应用遵循 Apple 的数据保护指南和 App Store 审核标准</li>
-                <li><span class="bullet">•</span>应用不包含第三方广告 SDK；AI 语境释义所用的智谱服务见下文章节；可选产品分析通过 CloudKit 传输，完整 MetricKit 报告不会由本应用上传或自行保存</li>
-                <li><span class="bullet">•</span>AI 语境释义功能使用已备案的智谱清言（ChatGLM）服务，详见下方「AI 数据处理」章节</li>
+                <li><span class="bullet">•</span>应用不包含第三方广告 SDK；AI 语境释义所用的服务商见下文章节；可选产品分析通过 CloudKit 传输，完整 MetricKit 报告不会由本应用上传或自行保存</li>
+                <li><span class="bullet">•</span>查词的服务商与传输范围见下方「AI 数据处理」章节</li>
             </ul>
         </div>
 
@@ -414,33 +414,40 @@
             <div class="sub-heading">服务提供商</div>
             <ul>
                 <li><span class="bullet">•</span><strong>EasyInput AI 中转服务</strong>，部署于中国上海，基础设施由腾讯云提供，服务地址：easyinput.cloud</li>
-                <li><span class="bullet">•</span><strong>智谱清言（ChatGLM）</strong>，由北京智谱华章科技股份有限公司提供，EasyInput 服务端将请求转发至其接口</li>
-                <li><span class="bullet">•</span><strong>生成式 AI 服务备案号：</strong>Beijing-ChatGLM-20230821（<a href="https://docs.bigmodel.cn/cn/guide/platform/filing">查看智谱官方备案信息</a>）</li>
+                <li><span class="bullet">•</span><strong>智谱清言（ChatGLM）</strong>，由北京智谱华章科技股份有限公司提供，用于免费版的 AI 查词、深入解释及旧版本兼容。备案号 Beijing-ChatGLM-20230821（<a href="https://docs.bigmodel.cn/cn/guide/platform/filing">智谱官方备案信息</a>）</li>
+                <li><span class="bullet">•</span><strong>火山引擎方舟（豆包）</strong>与<strong>阿里云百炼（千问）</strong>用于 Pro 查词。豆包为默认服务，暂时不可用时可在您已同意的服务内切换至千问。同一次查词的深入解释沿用已返回普通释义的服务。</li>
             </ul>
+            <p>在中国大陆以外使用 AI 查词时，上述请求也会由位于中国上海的 EasyInput 中转服务处理，再发给已获同意的服务商。</p>
 
             <div class="sub-heading">发送的数据</div>
-            <p>当您在阅读中查词时，以下数据会先发送至 EasyInput 服务端，再转发给智谱 AI：</p>
+            <p>当您在阅读中查词时，以下数据会先发送至 EasyInput 服务端，再转发给已获同意的服务商：</p>
             <ul>
                 <li><span class="bullet">•</span><strong>查询的词汇：</strong>您点击查询的英文单词或短语</li>
                 <li><span class="bullet">•</span><strong>目标句：</strong>包含该词的完整句子</li>
                 <li><span class="bullet">•</span><strong>邻近文本：</strong>当前段落及相邻段落中最多 600 个字符，用于理解语境</li>
-                <li><span class="bullet">•</span><strong>本地派生提示：</strong>您查询的是单个词还是连续选中的文本；不再预先识别词性或检索词典义项</li>
+                <li><span class="bullet">•</span><strong>本地派生提示：</strong>所选文本类型和设备识别出的词性提示</li>
+                <li><span class="bullet">•</span><strong>深入解释：</strong>主动展开时，还会发送该次查词的普通释义和语境提示</li>
             </ul>
 
             <div class="sub-heading">数据用途</div>
-            <p>发送的数据用于提供基于阅读语境的本次词汇释义。例如，查询"vessel"时，AI 会根据上下文判断此处指"船只"而非"血管"。EasyInput 不会使用这些阅读片段训练自己的模型；智谱会按照其公开的隐私政策和服务协议进行安全保障及依法处理。</p>
+            <p>发送的数据用于提供基于阅读语境的本次词汇释义。例如，查询"vessel"时，AI 会根据上下文判断此处指"船只"而非"血管"。EasyInput 不会使用这些阅读片段训练自己的模型。深入解释还使用该次查词的简短释义和语境提示。各服务商按各自的公开条款处理数据。</p>
 
             <div class="sub-heading">数据保护</div>
             <ul>
                 <li><span class="bullet">•</span>数据通过 HTTPS 加密传输</li>
-                <li><span class="bullet">•</span>EasyInput 服务端不持久化 AI 输入或生成结果；运行日志只记录随机请求编号、功能类型、响应状态和耗时，不记录提示词、生成内容、API Key 或完整网络地址</li>
+                <li><span class="bullet">•</span>EasyInput 中转服务不持久化 AI 输入或生成结果。运行日志记录请求编号、功能类型、供应商或模型、响应状态和耗时等运行信息，不记录提示词、生成内容、API Key 或完整网络地址</li>
                 <li><span class="bullet">•</span>网络地址仅在服务进程内存中短暂用于限流和安全保护，不写入访问日志</li>
-                <li><span class="bullet">•</span>不发送任何个人身份信息（姓名、邮箱、设备标识符等）</li>
-                <li><span class="bullet">•</span>不发送书名、档案、能力测试、兴趣偏好或阅读进度</li>
+                <li><span class="bullet">•</span>请求不会额外附加您的姓名、邮箱、设备标识符、书名、档案、能力测试、兴趣偏好或阅读进度。若选词、原句或邻近文本本身含有姓名等信息，这些信息会随片段一同传输</li>
             </ul>
 
             <div class="sub-heading">服务商处理与保留</div>
-            <p>EasyInput 服务端仅在完成本次转发和短期限流所需的内存中处理数据，不建立 AI 对话档案。智谱会按照其公开条款，在提供服务和满足合规要求所需的最小必要范围内存储数据，并采取必要的匿名化和加密处理。其公开隐私政策说明，无法重新识别的匿名化数据可能用于研究、统计、改进产品和服务，包括机器学习或模型算法训练。因此，EasyInput 不向您承诺智谱“零留存”或“绝不训练”。您可查看<a href="https://docs.bigmodel.cn/cn/terms/privacy-policy">智谱隐私政策</a>、<a href="https://docs.bigmodel.cn/cn/terms/service-agreement">服务协议</a>及<a href="https://docs.bigmodel.cn/cn/terms/user-agreement">用户协议</a>。</p>
+            <p>EasyInput 中转服务在本次转发和短期限流所需的内存中处理请求，不建立 AI 对话档案。服务商按各自条款及适用法律处理和保留调用数据：</p>
+            <ul>
+                <li><span class="bullet">•</span><strong>智谱：</strong>其公开隐私政策说明无法重新识别的匿名化数据可能用于研究、统计和改进服务，包括机器学习或模型算法训练。详见<a href="https://docs.bigmodel.cn/cn/terms/privacy-policy">智谱隐私政策</a>与<a href="https://docs.bigmodel.cn/cn/terms/service-agreement">服务协议</a>。</li>
+                <li><span class="bullet">•</span><strong>火山方舟：</strong>公开协议规定，除非另行同意，提交的内容和生成结果不会用于训练、重新训练或改进基础模型。数据处理以<a href="https://docs.volcengine.com/docs/ark/doubao-model-service-agreement?lang=zh">豆包模型服务协议</a>和<a href="https://docs.volcengine.com/docs/ark/volcengine-ark-model-service-security-whitepaper?lang=zh">火山方舟安全说明</a>为准。</li>
+                <li><span class="bullet">•</span><strong>阿里云百炼：</strong>公开说明称数据不会用于模型训练，并说明会按法律要求存储调用数据。详见<a href="https://help.aliyun.com/zh/model-studio/privacy-notice">百炼合规资质与隐私说明</a>。</li>
+            </ul>
+            <p>若需了解本次使用的服务商及其具体保留和删除规则，可通过本政策底部的联系方式查询。成功保存的语境释义可与原句在语言地图中回看。语言地图使用前述本机保存及 iCloud 同步规则。</p>
 
             <div class="sub-heading">订阅与阅读 AI 验证</div>
             <p>EasyInput Pro 通过 Apple 的 App 内购买提供。支付资料、扣款、续订、退款和撤销由 Apple 处理，EasyInput 不接触您的银行卡、支付宝资料或 Apple 账户密码。本地 Pro 权益由设备端已经验证的 StoreKit 交易判断，订阅状态不会写入您的 CloudKit 阅读数据。</p>
@@ -448,7 +455,7 @@
             <p>订阅验证请求不包含查询词、书名、阅读正文或 AI 答案；后续阅读 AI 内容请求也不再携带 Apple 签名交易。订阅到期、退款或撤销不会删除您的书籍、阅读进度、基础成长数据、分享内容或过去已生成的 Deep 结果。</p>
 
             <div class="sub-heading">您的选择</div>
-            <p>在第一次 AI 查词请求发送前，本应用会明确展示接收方和上述数据范围，并提供「允许并查词」与「使用系统词典」。您可在设置中随时撤回同意。</p>
+            <p>在第一次向相关 AI 服务商发送请求前，本应用会明确展示接收方和上述数据范围，并提供「允许并查词」与「使用系统词典」。旧授权未覆盖新增接收方时会重新征求您的同意。您可在「设置 → 语言服务 → 上下文释义」撤回同意，后续可继续使用系统词典。撤回同意不会自动删除已保存的阅读记录和释义。</p>
 
             <div class="sub-heading">离线降级</div>
             <p>AI 语境释义是系统词典的补充。请求较多或出现可恢复网络错误时，应用会在有限时间内自动排队重试；网络不可用、您不同意或服务失败时，系统词典仍可使用。</p>
